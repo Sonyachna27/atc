@@ -1,0 +1,95 @@
+.hero{
+	&__bg-wrapper{
+		
+		background: $--blue-blue;
+		background: url(../images/hero-bg.png) center center / cover no-repeat;
+		padding: 62px 0 420px 0;
+		margin-bottom: 20px;
+			@media screen and (min-width:767px) {
+				padding: 79px 0 412px 0;
+				margin-bottom: 40px;
+			
+			}
+		
+	}
+	&__container{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		gap: 20px;
+		color: $--white;
+		max-width: 930px;
+		margin: 0 auto;
+		& h1{
+			@include titleH1;
+			color: inherit;
+			 span{
+				display: block;
+			 }
+		}
+		& p{
+			max-width: 620px;
+			text-shadow: 0px 5px 40px rgba(0, 0, 0, 0.20);
+			font-size: 14px;
+			font-style: normal;
+			font-weight: 500;
+			line-height: 170%; 
+			letter-spacing: 0.18px;
+			margin-bottom: 10px;
+			@media screen and (min-width:768px) {
+				font-size: 18px;
+			}
+			& strong{
+				font-weight: 900;
+			}
+		}
+	}
+	&__links{
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+		@media screen and (min-width:1024px) {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+		}
+		&__link{
+			display: flex;
+			flex-direction: column;
+			gap: 60px;
+			align-items:flex-start;
+			padding: 40px;
+			background: linear-gradient(90deg, #FFF 0%, #F2F4F9 100%);
+			 a{
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				gap: 10px;
+				width: 100%;
+				transition: .3s linear;
+				@include titleH4;
+				span{
+					padding: 20px;
+					min-width: 41px;
+					transform: rotate(-2deg);
+					background-color: $--blue-Silver;
+					text-align: center;
+					vertical-align: middle;
+					transition: .3s linear;
+					img{
+						width: 13px;
+						height: 13px;
+						object-fit: cover;
+					}
+				}
+				&:hover{
+					span{
+						background-color: $--blue-blue;
+					}
+				}
+			}
+
+		}
+	}
+}

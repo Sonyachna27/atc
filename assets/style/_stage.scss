@@ -1,0 +1,95 @@
+
+
+.stage{
+	&__items{
+		position: relative;
+    align-items: start;
+		display: flex;
+		flex-direction: column;
+
+	}
+	&__item{
+		position: sticky;
+		top: 0;
+		gap: 20px;
+		display: flex;
+		flex-direction: column-reverse;
+		justify-content: space-between;
+		align-items: end;
+		padding: 30px 20px;
+		background-color: $--white;
+		width: 100%;
+		&:not(:nth-last-of-type(1), :nth-of-type(1)){
+			box-shadow: 0px -80px 50px 0px rgba(242, 244, 249, 0.60);
+		}
+		@media screen and (min-width:768px) {
+			gap: 67px;
+			flex-direction: row;
+			padding: 100px 70px;
+		}
+		@media screen and (max-width:767px) {
+			margin-left: -20px;
+			margin-right: -20px;
+			min-width: (calc(100% - 40px));
+		}
+		&__content{
+			display: flex;
+			align-items: flex-start;
+			gap: 16px;
+			max-width: 730px;
+			@media screen and (min-width:768px) {
+				gap: 40px;
+			}
+			&__count{
+				min-width: 45px;
+				position: relative;
+				color: $--blue-Silver;
+				font-family: "Golos Text";
+				font-size: 32px;
+				font-style: normal;
+				font-weight: 400;
+				line-height: 130%;
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				&:after{
+					content: '';
+					width: 1px;
+					height: 40px;
+					background-color: #B3C0CF;
+					display: block;
+				}
+
+			}
+			&__info{
+				& div{
+				@include titleH3;
+				max-width: 359px;
+				margin-bottom: 20px;
+				& span{
+					font: inherit;
+					color: $--blue-blue;
+				}
+				}
+				& p{
+					color: #18283C;
+					font-size: 14px;
+					font-style: normal;
+					font-weight: 500;
+					line-height: 160%;
+					margin-left: -45px;
+					@media screen and (min-width:768px) {
+						font-size: 20px;
+						margin-left: 0;
+					}
+				}
+			}
+		}
+		
+	}
+	&__img{
+		@media screen and (max-width:767.9px) {
+			margin: 0 auto;
+		}
+	}
+}
