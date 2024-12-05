@@ -1,0 +1,60 @@
+.faq{
+	&__items{
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+
+
+	}
+	&__item{
+		padding: 30px 20px;
+		background-color: #EAEFF3;
+		@media screen and (min-width:768px) {
+			padding: 40px;
+		}
+		&.active{
+			background-color: $--blue;
+		}
+		&__top{
+			display: flex;
+			align-items: center;
+			gap: 10px;
+			color: #97A5B0;
+			font-family: "Golos Text";
+			font-size: 16px;
+			font-style: normal;
+			font-weight: 500;
+			line-height: 130%;
+			@media screen and (min-width:768px) {
+				font-size: 18px;
+			}
+			.active & {
+				color: $--white;
+			}
+		}
+		&-bottom{
+			font-size: 16px;
+			font-style: normal;
+			font-weight: 500;
+			line-height: 150%;
+			color: $--blue-Silver;
+		}
+	}
+	&-icon-wrapper{
+		min-width: 34px;
+		min-height: 34px;
+		text-align: center;
+		background-color: #97A5B0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-left: auto;
+		@media screen and (min-width:768px) {
+			min-width: 41px;
+			min-height: 41px;
+		}
+		.active &{
+			background-color: $--blue-blue;
+		}
+	}
+}

@@ -3,6 +3,9 @@ document.addEventListener("DOMContentLoaded", function () {
 	toggleMenu();
 	windowLoad();
 	resizeStikyElement();
+	reviewsSlider();
+	accordionFunction();
+	addAnimationInit();
 });
 const toggleMenu = () =>{
 	const htmlElement = document.querySelector("html");
@@ -105,3 +108,54 @@ const resizeStikyElement = () => {
 	}
 };
 window.addEventListener("resize", resizeStikyElement);
+
+const reviewsSlider = () =>{
+	const reviewsSliderInit = new Swiper(".reviewsSlider", {
+		pagination: {
+			el: ".reviews-pagination",
+			type: "progressbar",
+		},
+		navigation: {
+			nextEl: ".reviews-button-next",
+			prevEl: ".reviews-button-prev",
+		},
+		slidesPerView: 1,
+		spaceBetween: 20,
+		breakpoints: {
+			768: {
+				slidesPerView: 2,
+				spaceBetween: 20
+			}
+		},
+		
+	});
+}
+const accordionFunction = () => {
+  const accordionItems = document.querySelectorAll(".accord-item");
+  
+  accordionItems.forEach((item) => {
+    item.addEventListener("click", function () {
+        item.classList.toggle("active");
+    });
+  });
+};
+const addAnimationInit = () => {
+
+	const scrollers = document.querySelectorAll('.marquee');
+	if(!window.matchMedia("(prefers-reduced-motion:reduce)").matches){
+		addAnimation();
+	}
+	function addAnimation(){
+		scrollers.forEach((scroller) =>{
+			scroller.setAttribute("data-animate", true);
+			const scrollerInner = scroller.querySelector('.marquee__wrap');
+			const scrollerContent = Array.from(scrollerInner.children);
+			scrollerContent.forEach(item =>{
+				const duplicatedItem = item.cloneNode(true);
+				duplicatedItem.setAttribute('aria-hidden', true);
+				scrollerInner.appendChild(duplicatedItem);
+			});
+			
+		});
+	}
+}

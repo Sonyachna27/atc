@@ -59,7 +59,7 @@ body{
 	text-transform: uppercase;
 	display: flex;
 	transform: rotate(-2deg);
-	padding: 25px 60px;
+	padding: 25px 30px;
 	justify-content: center;
 	align-items: center;
 	gap: 20px;
@@ -264,6 +264,7 @@ width: 100%;
 	max-width: fit-content;
 	margin: 0 auto;
 	margin-bottom: 50px;
+	text-align: center;
 	h2{
 		@include titleH2;
 		color: $--blue;
@@ -271,5 +272,23 @@ width: 100%;
 			font: inherit;
 			font-weight: 400;
 		}
+	}
+}
+.slider-btn{
+	width: 40px;
+	height: 40px;
+position: absolute;
+top: 40%;
+transform: translateY(-50%);
+z-index: 1;
+	svg{
+		width: 100%;
+		height: 100%;
+	}
+	&.swiper-button-disabled{
+		opacity: .6 ;
+	}
+	&.reviews-btn-next{
+		right:0;
 	}
 }
