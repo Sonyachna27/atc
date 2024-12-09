@@ -1,0 +1,151 @@
+.story{
+	&__top{
+		display: flex;
+		gap: 10px;
+		flex-direction: column;
+		@media screen and (min-width:1024px) {
+		flex-direction: row;
+		}
+	}
+	&__img{
+		max-width: 531px;
+		aspect-ratio: 1;
+		max-height: 525px;
+		transform: rotate(-2deg);
+		& img{
+			max-width: 100%;
+			max-height: 100%;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+		@media screen and (max-width:1023.9px) {
+			margin: 0 auto;
+		}
+	}
+	&__content{
+		padding: 30px 20px;
+		background-color: $--white;
+		color: $--blue;
+		width: 100%;
+		& h2{
+			@include titleH2;
+			margin-bottom: 20px;
+			text-transform: uppercase;
+		}
+		& p{
+			font-size: 14px;
+			font-style: normal;
+			font-weight: 500;
+			line-height: 150%;
+			@media screen and (min-width:768px) {
+				font-size: 20px;
+			}
+			& a{
+				font: inherit;
+				font-weight: 900;
+				transition: .3s linear;
+				&:hover{
+					color: $--blue-blue;
+				}
+			}
+			&:not(:nth-last-of-type(1)){
+				margin-bottom: 30px;
+				@media screen and (min-width:768px) {
+					margin-bottom: 40px;
+				}
+			}
+		}
+		& strong{
+			font-weight: 700;
+		}
+		@media screen and (min-width:1024px) {
+			
+			width: 57%;
+		}
+		@media screen and (min-width:768px) {
+			padding: 60px;
+		}
+	}
+	&__bottom{
+		display: flex;
+		gap: 20px;
+		flex-direction: column;
+		
+		@media screen and (min-width:768px) {
+			flex-direction: row;
+			flex-wrap: wrap;
+		}
+	}
+	&__item{
+		display: flex;
+		flex-direction: column;
+		flex-grow: 1;
+		height: auto;
+		max-width: 100%;
+		@media screen and (min-width:768px) {
+			max-width: calc((100% / 3) - 20px);
+			&:nth-of-type(3n + 2){
+				margin-top: 37px;
+			}
+			&:nth-of-type(3n + 3){
+				margin-top: 77px;
+			}
+		}
+		&__icon{
+			@media screen and (min-width:768px) {
+				transform: rotate(-5deg) translate(10px, 40px);
+			}
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			padding: 30px;
+			background-color: $--blue-blue;
+			max-width: fit-content;
+			transform: rotate(-5deg) translate(10px, 20px);
+	
+			svg{
+				max-width: 87px;
+				max-height: 87px;
+			}
+		}
+		&__advantages{
+			background-color: $--white;
+			display: flex;
+			flex-direction: column;
+			gap: 20px;
+			padding: 30px 20px 20px 20px;
+			min-height: 279px;
+			@media screen and (min-width:768px) {
+				padding: 60px 40px 40px 40px;
+			
+			}
+			
+			h3{
+				font-size: 24px;
+				font-style: normal;
+				font-weight: 700;
+				line-height: normal;
+				text-transform: uppercase;
+				color: $--blue-blue;
+				span{
+					font: inherit;
+					font-weight: 400;
+				}
+				@media screen and (min-width:768px) {
+					font-size: 20px;
+				}
+			}
+			p{
+				font-size: 16px;
+				font-style: normal;
+				font-weight: 500;
+				line-height: 140%;
+				@media screen and (min-width:768px) {
+					font-size: 14px;
+				}
+			}
+		}
+
+	}
+}

@@ -109,27 +109,49 @@ const resizeStikyElement = () => {
 };
 window.addEventListener("resize", resizeStikyElement);
 
-const reviewsSlider = () =>{
-	const reviewsSliderInit = new Swiper(".reviewsSlider", {
-		pagination: {
-			el: ".reviews-pagination",
-			type: "progressbar",
-		},
-		navigation: {
-			nextEl: ".reviews-button-next",
-			prevEl: ".reviews-button-prev",
-		},
-		slidesPerView: 1,
-		spaceBetween: 20,
-		breakpoints: {
-			768: {
-				slidesPerView: 2,
-				spaceBetween: 20
-			}
-		},
+const reviewsSlider = () => {
+  const parentReviewsSlider = document.querySelector('.reviews');
+
+  if (!parentReviewsSlider.classList.contains('withoutSlider')) {
+		console.log('done');
 		
-	});
-}
+    const initReviewsSlider = document.querySelector('.reviewsSlider');
+		if(!initReviewsSlider) return;
+    const reviewsSliderInit = new Swiper(".reviewsSlider", {
+      pagination: {
+        el: ".reviews-pagination",
+        type: "progressbar",
+      },
+      navigation: {
+        nextEl: ".reviews-button-next",
+        prevEl: ".reviews-button-prev",
+      },
+      slidesPerView: 1,
+      spaceBetween: 20,
+      breakpoints: {
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 20
+        }
+      },
+    });
+  } else {
+    const swiperElements = document.querySelector('.reviews__slider');
+		if(!swiperElements) return;
+		const childElements = swiperElements.querySelectorAll('*');
+	
+		childElements.forEach((el) => {
+			Array.from(el.classList).forEach((className) => {
+				
+				if (className.startsWith('swiper-') || className === 'swiper') {
+					el.classList.remove(className);
+				}
+			});
+		});
+		
+  }
+};
+
 const accordionFunction = () => {
   const accordionItems = document.querySelectorAll(".accord-item");
   
