@@ -111,10 +111,9 @@ window.addEventListener("resize", resizeStikyElement);
 
 const reviewsSlider = () => {
   const parentReviewsSlider = document.querySelector('.reviews');
-
+	if(!parentReviewsSlider) return;
   if (!parentReviewsSlider.classList.contains('withoutSlider')) {
-		console.log('done');
-		
+	
     const initReviewsSlider = document.querySelector('.reviewsSlider');
 		if(!initReviewsSlider) return;
     const reviewsSliderInit = new Swiper(".reviewsSlider", {
