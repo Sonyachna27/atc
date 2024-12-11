@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	reviewsSlider();
 	accordionFunction();
 	addAnimationInit();
+	galleryTabs();
 });
 const toggleMenu = () =>{
 	const htmlElement = document.querySelector("html");
@@ -179,4 +180,56 @@ const addAnimationInit = () => {
 			
 		});
 	}
+}
+const galleryTabs = () =>{
+	const galleryNameImg = document.querySelectorAll(".gallery__img");
+const galleryTabsBtn = document.querySelectorAll(".gallery__tab");
+
+if (galleryTabsBtn) {
+  function showImage(imageSlug) {
+    galleryNameImg.forEach((image) => {
+      let imageDataSlug = image.dataset.slug;
+      if (imageDataSlug === imageSlug) {
+        image.style.display = "flex";
+      } else {
+        image.style.display = "none";
+      }
+    });
+  }
+
+  function activeTabs() {
+    galleryTabsBtn.forEach((tab) => {
+      let tabsSlug = tab.dataset.slug;
+      let hasImage = false;
+
+      galleryNameImg.forEach((image) => {
+        let imageDataSlug = image.dataset.slug;
+        if (imageDataSlug === tabsSlug) {
+          hasImage = true;
+          return;
+        }
+      });
+
+      if (hasImage || tabsSlug === 'all') {
+        tab.style.display = "flex";
+      } else {
+        tab.style.display = "none";
+      }
+
+      tab.addEventListener('click', () => {
+        galleryTabsBtn.forEach((t) => t.classList.remove('active-tab'));
+        tab.classList.add('active-tab');
+        if (tabsSlug === 'all') {
+          galleryNameImg.forEach((image) => {
+            image.style.display = "flex";
+          });
+        } else {
+          showImage(tab.dataset.slug);
+        }
+      });
+    });
+  }
+
+  activeTabs();
+}
 }

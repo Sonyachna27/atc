@@ -20,9 +20,12 @@
 			align-items: start;
 		}
 		&__socials{
+			gap: 6px;
 			a{
 				max-width: 23px;
 				max-height: 27px;
+				width: 100%;
+				height: 100%;
 			}
 		}
 		&__contact{
