@@ -730,22 +730,6 @@ form fieldset input[type=radio]:checked:after {
   background-color: #019FC4;
 }
 
-.iosInputFix {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-
-select {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-
-:root body .wnd__window-container select, :root select {
-  padding-right: 22px !important;
-}
-
 .header {
   z-index: 50;
   position: relative;
