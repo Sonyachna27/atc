@@ -535,7 +535,6 @@ form select {
   align-items: center;
   gap: 10px;
   border-radius: 0;
-  min-height: 60px;
   border-bottom: 4px solid #8D909B;
   background: #FFF;
   max-width: 100%;
@@ -548,6 +547,7 @@ form input:not([type=submit], [type=checkbox])::-moz-placeholder, form select::-
   font-style: normal;
   font-weight: 500;
   line-height: 140%;
+  padding: 20px 25px;
 }
 form input:not([type=submit], [type=checkbox])::placeholder,
 form input:not([type=submit], [type=checkbox]) option,
@@ -558,6 +558,7 @@ form select option {
   font-style: normal;
   font-weight: 500;
   line-height: 140%;
+  padding: 20px 25px;
 }
 form input:not([type=submit], [type=checkbox]):focus-visible,
 form select:focus-visible {
@@ -593,12 +594,13 @@ form .select-wrap {
   font-weight: 500;
   line-height: 140%;
 }
-form .select-wrap option {
+form .select-wrap select option {
   color: #8D909B;
   font-size: 14px;
   font-style: normal;
   font-weight: 500;
   line-height: 140%;
+  padding: 20px 25px;
 }
 form .submit__wrap {
   position: relative;

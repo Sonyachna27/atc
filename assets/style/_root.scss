@@ -374,7 +374,6 @@ form{
 		padding: 20px 25px;
 		align-items: center;
 		gap: 10px;border-radius: 0;
-		min-height: 60px;
 		border-bottom: 4px solid #8D909B;
 		background: $--white;
 		max-width: 100%;
@@ -387,6 +386,7 @@ form{
 			font-style: normal;
 			font-weight: 500;
 			line-height: 140%; 
+			padding: 20px 25px;;
 		}
 		&:focus-visible{
 			border-bottom-color: $--blue-blue;
@@ -419,12 +419,13 @@ form{
 			font-style: normal;
 			font-weight: 500;
 			line-height: 140%; 
-		option{
+	select	option{
 			color: #8D909B;
 			font-size: 14px;
 			font-style: normal;
 			font-weight: 500;
 			line-height: 140%; 
+			padding: 20px 25px;;
 		}
 	}
 	.submit__wrap{
