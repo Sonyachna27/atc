@@ -117,6 +117,10 @@ body {
   background-color: #F2F4F9;
 }
 
+section {
+  overflow: hidden;
+}
+
 .btn {
   color: #FFF;
   font-family: "Golos Text";

@@ -49,6 +49,9 @@ body{
 		color: #3E444A;
 		background-color: $--light-blue;
 }
+section{
+	overflow: hidden;
+}
 .btn{
 	color: $--white;
 	font-family: "Golos Text";
