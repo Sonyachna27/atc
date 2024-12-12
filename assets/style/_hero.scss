@@ -2,7 +2,7 @@
 	&__bg-wrapper{
 		
 		background: $--blue-blue;
-		background: url(../images/hero-bg.png) center center / cover no-repeat;
+		background: url(../images/hero-bg.png) center 35% / cover no-repeat;
 		padding: 62px 0 420px 0;
 		margin-bottom: 20px;
 			@media screen and (min-width:767px) {

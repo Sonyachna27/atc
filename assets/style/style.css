@@ -996,7 +996,7 @@ select {
 
 .hero__bg-wrapper {
   background: #019FC4;
-  background: url(../images/hero-bg.png) center center/cover no-repeat;
+  background: url(../images/hero-bg.png) center 35%/cover no-repeat;
   padding: 62px 0 420px 0;
   margin-bottom: 20px;
 }
@@ -1286,6 +1286,11 @@ select {
 @media screen and (min-width: 768px) {
   .services {
     padding: 100px 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  .services__title-wrap {
+    align-items: center;
   }
 }
 .services__items {

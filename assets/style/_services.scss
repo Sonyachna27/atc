@@ -4,6 +4,11 @@
 	@media screen and (min-width:768px) {
 		padding: 100px 0;
 	}
+	&__title-wrap{
+		@media screen and (max-width:768px) {
+			align-items: center;
+		}
+	}
 	&__items{
 		display: flex;
 		flex-direction: column;
