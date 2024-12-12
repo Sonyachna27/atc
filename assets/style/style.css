@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* reset */
 *,
 *::before,
@@ -727,6 +728,24 @@ form fieldset input[type=radio]:checked {
 }
 form fieldset input[type=radio]:checked:after {
   background-color: #019FC4;
+}
+
+.iosInputFix {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+input:not([type=“radio”]):not([type=“file”]):not([type=“checkbox”]):not(.custom-input), select, textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+:root body .wnd__window-container select, :root select {
+  padding-right: 22px !important;
+  background-position: calc(100% - 7px) center;
+  background-repeat: no-repeat;
 }
 
 .header {

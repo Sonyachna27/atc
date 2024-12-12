@@ -373,7 +373,8 @@ form{
 		display: flex;
 		padding: 20px 25px;
 		align-items: center;
-		gap: 10px;border-radius: 0;
+		gap: 10px;
+		border-radius: 0;
 		border-bottom: 4px solid #8D909B;
 		background: $--white;
 		max-width: 100%;
@@ -388,6 +389,7 @@ form{
 			line-height: 140%; 
 			padding: 20px 25px;;
 		}
+
 		&:focus-visible{
 			border-bottom-color: $--blue-blue;
 			color: $--blue-blue;
@@ -548,3 +550,21 @@ form{
 	}
 	}
 }
+
+.iosInputFix {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	}
+	
+	input:not([type=“radio”]):not([type=“file”]):not([type=“checkbox”]):not(.custom-input), select, textarea {
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		appearance: none;
+	}
+	
+	:root body .wnd__window-container select, :root select {
+	padding-right: 22px !important;
+	background-position: calc(100% - 7px) center;
+	background-repeat: no-repeat;
+	}
