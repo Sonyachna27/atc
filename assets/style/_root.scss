@@ -49,9 +49,7 @@ body{
 		color: #3E444A;
 		background-color: $--light-blue;
 }
-section{
-	overflow: hidden;
-}
+
 .btn{
 	color: $--white;
 	font-family: "Golos Text";
@@ -371,6 +369,9 @@ form{
 		border: none;
 		outline: none;
 	}
+	fieldset{
+		padding: 0;
+	}
 	input:not([type="submit"], [type="checkbox"]),
 	select{
 		display: flex;
@@ -390,7 +391,6 @@ form{
 			font-style: normal;
 			font-weight: 500;
 			line-height: 140%; 
-			padding: 20px 25px;;
 		}
 
 		&:focus-visible{
@@ -560,7 +560,7 @@ form{
 	appearance: none;
 	}
 	
-	input:not([type=“radio”]):not([type=“file”]):not([type=“checkbox”]):not(.custom-input), select, textarea {
+	select {
 		-webkit-appearance: none;
 		-moz-appearance: none;
 		appearance: none;
@@ -568,6 +568,4 @@ form{
 	
 	:root body .wnd__window-container select, :root select {
 	padding-right: 22px !important;
-	background-position: calc(100% - 7px) center;
-	background-repeat: no-repeat;
 	}

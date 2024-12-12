@@ -1,4 +1,5 @@
 .our{
+	overflow-x: hidden;
 	&__items{
 		display: flex;
 		flex-direction: column;
