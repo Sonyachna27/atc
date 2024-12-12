@@ -595,7 +595,15 @@ form .select-wrap {
   font-weight: 500;
   line-height: 140%;
 }
-form .select-wrap select option {
+form::-moz-placeholder {
+  color: #8D909B;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%;
+  padding: 20px 25px;
+}
+form select option, form::placeholder {
   color: #8D909B;
   font-size: 14px;
   font-style: normal;

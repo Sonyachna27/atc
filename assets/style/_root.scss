@@ -424,14 +424,16 @@ form{
 			font-style: normal;
 			font-weight: 500;
 			line-height: 140%; 
-	select	option{
-			color: #8D909B;
-			font-size: 14px;
-			font-style: normal;
-			font-weight: 500;
-			line-height: 140%; 
-			padding: 20px 25px;;
-		}
+
+	}
+& select option,
+&::placeholder{
+		color: #8D909B;
+		font-size: 14px;
+		font-style: normal;
+		font-weight: 500;
+		line-height: 140%; 
+		padding: 20px 25px;;
 	}
 	.submit__wrap{
 		position: relative;
