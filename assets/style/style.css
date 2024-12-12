@@ -594,6 +594,7 @@ form .select-wrap {
   font-style: normal;
   font-weight: 500;
   line-height: 140%;
+  position: relative;
 }
 form::-moz-placeholder {
   color: #8D909B;
@@ -3086,12 +3087,15 @@ select {
   margin-top: 40px;
 }
 .connect__form form .submit__wrap {
+  transform: rotate(-1deg);
   max-width: 100%;
   width: 100%;
   text-transform: uppercase;
 }
 .connect__form form .submit__wrap:after {
   background-image: url(../images/arrow.svg);
+  right: calc(37% + 3px);
+  transform: translate(50%, 31%);
 }
 .connect__form form .submit__wrap input {
   background-color: #019FC4;

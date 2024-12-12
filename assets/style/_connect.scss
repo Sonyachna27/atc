@@ -99,11 +99,14 @@
 		& form{
 			margin-top: 40px;
 			 .submit__wrap{
+				transform: rotate(-1deg);
 				max-width: 100%;
 				width: 100%;
 				text-transform: uppercase;
 				&:after{
 					background-image: url(../images/arrow.svg);
+					right: calc(37% + 3px);
+					transform: translate(50%, 31%);
 				}
 				input{
 					background-color: $--blue-blue;
