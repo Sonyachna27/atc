@@ -433,7 +433,7 @@ form{
 		font-style: normal;
 		font-weight: 500;
 		line-height: 140%; 
-		padding: 20px 25px;;
+		padding: 20px 25px;
 	}
 	.submit__wrap{
 		position: relative;
@@ -562,11 +562,11 @@ form{
 // 	appearance: none;
 // 	}
 	
-// 	select {
-// 		-webkit-appearance: none;
-// 		-moz-appearance: none;
-// 		appearance: none;
-// 	}
+	select {
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		appearance: none;
+	}
 	
 	// :root body .wnd__window-container select, :root select {
 	// padding-right: 22px !important;

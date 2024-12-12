@@ -738,6 +738,12 @@ form fieldset input[type=radio]:checked:after {
   background-color: #019FC4;
 }
 
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
 .header {
   z-index: 50;
   position: relative;
