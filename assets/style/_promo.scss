@@ -52,6 +52,10 @@
 		}
 		& .btn{
 		margin-top: auto;
+		@media screen and (max-width:768px) {
+			max-width: 100%;
+			width: 100%;
+		}
 		}
 	}
 	&__img{

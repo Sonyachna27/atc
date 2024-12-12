@@ -373,7 +373,8 @@ form{
 		display: flex;
 		padding: 20px 25px;
 		align-items: center;
-		gap: 10px;
+		gap: 10px;border-radius: 0;
+		min-height: 60px;
 		border-bottom: 4px solid #8D909B;
 		background: $--white;
 		max-width: 100%;
@@ -455,6 +456,7 @@ form{
 			width: 100%;
 			padding: 20px 30px;
 			cursor: pointer;
+			border-radius: 0;
 			transition: .3s linear;
 			@media screen and (min-width:768px) {
 				max-width: 288px;
@@ -474,7 +476,7 @@ form{
 			min-width: 13px;
 			height: 13px;
 			position: absolute;
-			
+			border-radius: 0;
 		}
 	}
 	.form__touch{

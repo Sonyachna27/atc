@@ -7,6 +7,10 @@ document.addEventListener("DOMContentLoaded", function () {
 	accordionFunction();
 	addAnimationInit();
 	galleryTabs();
+
+});
+AOS.init({
+	duration: 1000,
 });
 const toggleMenu = () =>{
 	const htmlElement = document.querySelector("html");

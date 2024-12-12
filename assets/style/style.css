@@ -534,6 +534,8 @@ form select {
   padding: 20px 25px;
   align-items: center;
   gap: 10px;
+  border-radius: 0;
+  min-height: 60px;
   border-bottom: 4px solid #8D909B;
   background: #FFF;
   max-width: 100%;
@@ -629,6 +631,7 @@ form .submit__wrap input {
   width: 100%;
   padding: 20px 30px;
   cursor: pointer;
+  border-radius: 0;
   transition: 0.3s linear;
 }
 @media screen and (min-width: 768px) {
@@ -649,6 +652,7 @@ form .submit__wrap:after {
   min-width: 13px;
   height: 13px;
   position: absolute;
+  border-radius: 0;
 }
 form .form__touch {
   color: #FFF;
@@ -1413,6 +1417,12 @@ form fieldset input[type=radio]:checked:after {
 }
 .promo__info .btn {
   margin-top: auto;
+}
+@media screen and (max-width: 768px) {
+  .promo__info .btn {
+    max-width: 100%;
+    width: 100%;
+  }
 }
 .promo__img {
   -webkit-clip-path: polygon(0 0, 100% 0%, 100% 83%, 50% 100%, 0 83%);
