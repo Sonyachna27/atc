@@ -1020,7 +1020,9 @@ select {
 
 .hero__bg-wrapper {
   background: #019FC4;
-  background: url(../images/hero-bg.webp) center 35%/cover no-repeat;
+  background-position: center 35%;
+  background-size: cover;
+  background-repeat: no-repeat;
   padding: 62px 0 420px 0;
   margin-bottom: 20px;
 }
