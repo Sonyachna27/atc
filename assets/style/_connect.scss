@@ -103,16 +103,16 @@
 				max-width: 100%;
 				width: 100%;
 				text-transform: uppercase;
-				&:after{
-					background-image: url(../images/arrow.svg);
-					right: calc(37% + 3px);
-					transform: translate(50%, 31%);
-				}
+				
 				input{
 					background-color: $--blue-blue;
 					color: $--white;
 					max-width: 100%;
 				width: 100%;
+				&:hover{
+					background-color: $--white;
+					color: $--blue;
+				}
 				 }
 			 }
 		}

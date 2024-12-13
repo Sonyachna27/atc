@@ -38,9 +38,10 @@
 		top: 0;
 		left: 0;
 		z-index: 1;
+		transition: .3s linear;
 	}
 	&:hover{
-		&:after{
+		&:before{
 			background-color: $--blue;
 		}
 		.services__item__info{

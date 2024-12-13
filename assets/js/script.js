@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	addAnimationInit();
 	galleryTabs();
 	animationHeader();
+	showFixedBtn();
 });
 AOS.init({
 	duration: 1000,
@@ -258,3 +259,37 @@ if (galleryTabsBtn) {
   activeTabs();
 }
 }
+const showFixedBtn = () => {
+  const scrollBtn = document.querySelector(".fixed-btn");
+
+  const handleScroll = () => {
+    if (window.scrollY > 100) {
+      scrollBtn.classList.add("show");
+    } else {
+      scrollBtn.classList.remove("show");
+    }
+  };
+
+  const handleResize = () => {
+    if (window.innerWidth < 1024) {
+      window.addEventListener("scroll", handleScroll);
+      scrollBtn.addEventListener("click", () => {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      });
+    } else {
+      window.removeEventListener("scroll", handleScroll);
+      scrollBtn.classList.remove("show"); 
+    }
+  };
+
+  
+  handleResize();
+
+ 
+  window.addEventListener("resize", handleResize);
+};
+
+

@@ -50,7 +50,11 @@
 					background-color: $--blue-blue;
 					color: $--white;
 					max-width: 100%;
-				width: 100%;
+					width: 100%;
+					&:hover{
+						background-color: $--white;
+						color: $--blue;
+					}
 				 }
 			 }
 		}

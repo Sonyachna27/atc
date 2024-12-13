@@ -67,11 +67,14 @@
 				flex-direction: row;
 			}
 			li:not(.sub-menu li){
-				max-width: 170px;
+				
 				width: fit-content;
 				display: flex;
 				flex-direction: column;
 				gap: 30px;
+				@media screen and (min-width:640px) {
+					max-width: 170px;
+				}
 			& > a{
 				@include titleH5;
 				text-transform: uppercase;
