@@ -39,14 +39,11 @@
 			margin-top: 40px;
 			
 		
-			 .submit__wrap{
+			 input[type="submit"]{
 				max-width: 100%;
 				width: 100%;
 				text-transform: uppercase;
-				&:after{
-					background-image: url(../images/arrow.svg);
-				}
-				input{
+			
 					background-color: $--blue-blue;
 					color: $--white;
 					max-width: 100%;
@@ -57,7 +54,7 @@
 					}
 				 }
 			 }
-		}
+		
 	}
 	&__content{
 		width: 100%;		

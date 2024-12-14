@@ -618,25 +618,15 @@ form select option, form::placeholder {
   line-height: 140%;
   padding: 20px 25px;
 }
-form .submit__wrap {
-  position: relative;
-  max-width: 288px;
-  width: 100%;
-  transform: rotate(-1deg);
-  cursor: pointer;
-}
-@media screen and (max-width: 768px) {
-  form .submit__wrap {
-    margin: 0 auto;
-  }
-}
-form .submit__wrap input {
+
+input[type=submit] {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
   width: 100%;
   height: 100%;
+  width: 100%;
   background-color: transparent;
   font-size: 14px;
   font-style: normal;
@@ -651,16 +641,24 @@ form .submit__wrap input {
   cursor: pointer;
   border-radius: 0;
   transition: 0.3s linear;
+  transform: rotate(-1deg);
+  cursor: pointer;
+}
+@media screen and (max-width: 768px) {
+  input[type=submit] {
+    margin: 0 auto;
+  }
 }
 @media screen and (min-width: 768px) {
-  form .submit__wrap input {
+  input[type=submit] {
     max-width: 288px;
   }
 }
-form .submit__wrap input:hover {
+input[type=submit]:hover {
   background-color: #019FC4;
 }
-form .form__touch {
+
+.form__touch {
   color: #FFF;
   font-size: 14px;
   font-style: normal;
@@ -668,11 +666,12 @@ form .form__touch {
   line-height: 140%;
 }
 @media screen and (min-width: 768px) {
-  form .form__touch {
+  .form__touch {
     font-size: 16px;
   }
 }
-form fieldset {
+
+fieldset {
   color: #FFF;
   font-size: 14px;
   font-style: normal;
@@ -680,11 +679,11 @@ form fieldset {
   line-height: 140%;
 }
 @media screen and (min-width: 768px) {
-  form fieldset {
+  fieldset {
     font-size: 16px;
   }
 }
-form fieldset label {
+fieldset label {
   display: flex;
   gap: 8px;
   align-items: center;
@@ -693,7 +692,7 @@ form fieldset label {
   color: #E6E6E6;
   position: relative;
 }
-form fieldset input[type=radio] {
+fieldset input[type=radio] {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
@@ -709,7 +708,7 @@ form fieldset input[type=radio] {
   border: 0.5px solid #E6E6E6;
   background-color: transparent;
 }
-form fieldset input[type=radio]:after {
+fieldset input[type=radio]:after {
   content: "";
   transition: 0.3s linear;
   display: flex;
@@ -726,10 +725,10 @@ form fieldset input[type=radio]:after {
   position: relative;
   z-index: 0;
 }
-form fieldset input[type=radio]:checked {
+fieldset input[type=radio]:checked {
   border-color: #019FC4;
 }
-form fieldset input[type=radio]:checked:after {
+fieldset input[type=radio]:checked:after {
   background-color: #019FC4;
 }
 
@@ -1019,6 +1018,7 @@ select {
 }
 
 .hero__bg-wrapper {
+  background-image: url(../images/hero-bg.webp);
   background-position: center 35%;
   background-size: cover;
   background-repeat: no-repeat;
@@ -2665,21 +2665,16 @@ select {
 .single__form form {
   margin-top: 40px;
 }
-.single__form form .submit__wrap {
+.single__form form input[type=submit] {
   max-width: 100%;
   width: 100%;
   text-transform: uppercase;
-}
-.single__form form .submit__wrap:after {
-  background-image: url(../images/arrow.svg);
-}
-.single__form form .submit__wrap input {
   background-color: #019FC4;
   color: #FFF;
   max-width: 100%;
   width: 100%;
 }
-.single__form form .submit__wrap input:hover {
+.single__form form input[type=submit]:hover {
   background-color: #FFF;
   color: #002854;
 }
@@ -3155,19 +3150,17 @@ select {
 .connect__form form {
   margin-top: 40px;
 }
-.connect__form form .submit__wrap {
+.connect__form form input[type=submit] {
   transform: rotate(-1deg);
   max-width: 100%;
   width: 100%;
   text-transform: uppercase;
-}
-.connect__form form .submit__wrap input {
   background-color: #019FC4;
   color: #FFF;
   max-width: 100%;
   width: 100%;
 }
-.connect__form form .submit__wrap input:hover {
+.connect__form form input[type=submit]:hover {
   background-color: #FFF;
   color: #002854;
 }
